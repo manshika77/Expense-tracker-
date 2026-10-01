@@ -1,0 +1,29 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;font-family:Arial,sans-serif;background:#f4f6fb;color:#172033;padding:30px 18px}
+.container{max-width:1050px;margin:auto}
+header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+.eyebrow{font-size:11px;letter-spacing:3px;font-weight:bold;opacity:.55;margin-bottom:8px}
+h1{font-size:38px;margin-bottom:7px}.subtitle{color:#6c7485}
+.wallet{width:64px;height:64px;display:grid;place-items:center;border-radius:20px;background:#172033;font-size:30px}
+.summary{display:grid;grid-template-columns:2fr 1fr 1fr;gap:15px;margin-bottom:18px}
+.summary-card,.panel{background:#fff;border:1px solid #e7eaf0;border-radius:18px;box-shadow:0 8px 30px rgba(30,40,70,.06)}
+.summary-card{padding:22px}.summary-card span{display:block;color:#7a8291;font-size:13px;margin-bottom:8px}.summary-card strong{font-size:27px}
+.panel{padding:25px;margin-bottom:18px}
+.panel-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+h2{font-size:19px}
+.form-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:14px;margin-bottom:17px}
+label{color:#667084;font-size:12px;font-weight:700}
+input,select{width:100%;margin-top:7px;padding:13px;border:1px solid #dfe3eb;border-radius:10px;outline:none;font-size:14px;background:#fff;color:#172033}
+input:focus,select:focus{border-color:#172033}
+.primary{border:0;border-radius:10px;padding:13px 20px;background:#172033;color:white;font-weight:bold;cursor:pointer}
+.text-button{border:0;background:none;color:#697386;cursor:pointer}.hidden{display:none}
+#message{margin-top:12px;font-size:13px;color:#5d687b}
+.expense-list{display:flex;flex-direction:column;gap:10px}
+.expense{display:grid;grid-template-columns:1fr 130px 100px 90px;align-items:center;gap:12px;padding:15px;border:1px solid #edf0f5;border-radius:13px}
+.expense-title{font-weight:700}.expense-meta{font-size:12px;color:#7b8494;margin-top:4px}
+.amount{font-weight:bold}.tag{font-size:12px;padding:6px 9px;border-radius:20px;background:#f0f2f6;text-align:center}
+.actions{display:flex;gap:7px}.actions button{border:0;background:#eef1f5;padding:8px 10px;border-radius:8px;cursor:pointer}
+.empty{text-align:center;padding:30px;color:#858d9c}
+footer{text-align:center;color:#8991a0;font-size:12px;padding:8px}
+@media(max-width:760px){.summary{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr 1fr}.expense{grid-template-columns:1fr 1fr}.actions{justify-content:flex-end}}
+@media(max-width:480px){body{padding:20px 12px}h1{font-size:29px}.wallet{width:50px;height:50px;font-size:23px}.panel{padding:18px}.form-grid{grid-template-columns:1fr}.expense{grid-template-columns:1fr}.panel-heading{align-items:flex-start;gap:10px}}

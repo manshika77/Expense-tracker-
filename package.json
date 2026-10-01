@@ -1,0 +1,11 @@
+{
+  "name": "expense-tracker-netlify",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Netlify-ready full-stack expense tracker using Express Functions and Netlify Blobs",
+  "dependencies": {
+    "@netlify/blobs": "^10.0.0",
+    "express": "^4.21.2",
+    "serverless-http": "^3.2.0"
+  }
+}

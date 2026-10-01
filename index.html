@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container">
+  <header>
+    <div>
+      <p class="eyebrow">PERSONAL FINANCE</p>
+      <h1>Expense Tracker</h1>
+      <p class="subtitle">Track your spending, one expense at a time.</p>
+    </div>
+    <div class="wallet">💳</div>
+  </header>
+
+  <section class="summary">
+    <div class="summary-card">
+      <span>Total Spent</span><strong id="totalAmount">₹0</strong>
+    </div>
+    <div class="summary-card">
+      <span>Transactions</span><strong id="transactionCount">0</strong>
+    </div>
+    <div class="summary-card">
+      <span>This Month</span><strong id="monthAmount">₹0</strong>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-heading">
+      <h2 id="formTitle">Add Expense</h2>
+      <button id="cancelEdit" class="text-button hidden">Cancel edit</button>
+    </div>
+
+    <form id="expenseForm">
+      <input type="hidden" id="expenseId">
+      <div class="form-grid">
+        <label>Title
+          <input id="title" type="text" placeholder="e.g. Dinner" required>
+        </label>
+        <label>Amount (₹)
+          <input id="amount" type="number" min="1" step="0.01" placeholder="500" required>
+        </label>
+        <label>Category
+          <select id="category" required>
+            <option value="">Choose category</option>
+            <option>Food</option><option>Transport</option><option>Shopping</option>
+            <option>Bills</option><option>Entertainment</option><option>Education</option>
+            <option>Health</option><option>Other</option>
+          </select>
+        </label>
+        <label>Date
+          <input id="date" type="date" required>
+        </label>
+      </div>
+      <button class="primary" type="submit" id="submitButton">Add Expense</button>
+    </form>
+    <p id="message"></p>
+  </section>
+
+  <section class="panel">
+    <div class="panel-heading">
+      <h2>Recent Expenses</h2>
+      <select id="filter">
+        <option value="All">All Categories</option>
+        <option>Food</option><option>Transport</option><option>Shopping</option>
+        <option>Bills</option><option>Entertainment</option><option>Education</option>
+        <option>Health</option><option>Other</option>
+      </select>
+    </div>
+    <div id="expenseList" class="expense-list"></div>
+  </section>
+
+  <footer>Built with HTML • CSS • JavaScript • Node.js • Express</footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
